@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    cookies[:foo] = 'FOO'
+    cookies[:bar] = 'BAR'
     @users = User.all
   end
 
